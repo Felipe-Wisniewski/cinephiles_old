@@ -9,6 +9,7 @@
 /.idea/assetWizardSettings.xml
 .DS_Store
 /build
+/app/src/main/java/com/exemple/android/cinephilesapp/repository/retrofit/ApiUtils.kt
 /captures
 .externalNativeBuild
 .cxx
