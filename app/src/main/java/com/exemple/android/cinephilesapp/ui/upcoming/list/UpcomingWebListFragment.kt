@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import com.exemple.android.cinephilesapp.R
 import com.exemple.android.cinephilesapp.ui.upcoming.UpcomingViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -20,6 +21,9 @@ class UpcomingListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel.movies.observe(viewLifecycleOwner, Observer { m ->
+
+        })
 
     }
 
