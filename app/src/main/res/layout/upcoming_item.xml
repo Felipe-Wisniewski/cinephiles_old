@@ -25,38 +25,40 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/txtTitleMovie"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:contentDescription="TODO" />
+            android:contentDescription="@string/description_img_movie" />
 
         <TextView
             android:id="@+id/txtTitleMovie"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@+id/imgUpcomingMovie"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imgStar"
             android:text="@{movie.title}"
-            tools:text="Title Movie"/>
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="@+id/imgUpcomingMovie"
+            app:layout_constraintEnd_toStartOf="@+id/imgStar"
+            app:layout_constraintStart_toEndOf="@+id/imgUpcomingMovie"
+            tools:text="Title Movie" />
 
         <ImageView
             android:id="@+id/imgStar"
             android:layout_width="20dp"
             android:layout_height="20dp"
             app:layout_constraintStart_toEndOf="@+id/txtTitleMovie"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtRating"
             app:layout_constraintEnd_toStartOf="@+id/txtRating"
             app:srcCompat="@android:drawable/btn_star_big_on"
-            tools:layout_editor_absoluteX="228dp" />
+            tools:layout_editor_absoluteX="228dp"
+            android:contentDescription="@string/description_img_star" />
 
         <TextView
             android:id="@+id/txtRating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@+id/imgStar"
-            app:layout_constraintTop_toTopOf="parent"
+            android:text="@{@string/text_format_vote_average(movie.vote_average)}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtTitleMovie"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="7.5"/>
+            app:layout_constraintStart_toEndOf="@+id/imgStar"
+            tools:text="7.5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

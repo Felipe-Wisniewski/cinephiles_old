@@ -9,8 +9,8 @@ import com.exemple.android.cinephilesapp.R
 import com.exemple.android.cinephilesapp.databinding.UpcomingItemBinding
 import com.exemple.android.cinephilesapp.model.UpcomingMovie
 
-class UpcomingListAdapter(private val movies: List<UpcomingMovie>,
-                          private val onItemClick: (UpcomingMovie) -> Unit) : RecyclerView.Adapter<UpcomingListAdapter.VH>() {
+class UpcomingAdapter(private val movies: List<UpcomingMovie>,
+                      private val onItemClick: (UpcomingMovie) -> Unit) : RecyclerView.Adapter<UpcomingAdapter.VH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.upcoming_item, parent, false)

@@ -9,4 +9,7 @@ class UpcomingViewModel(repository: MovieRepositoryImpl) : ViewModel() {
 
     val movies : LiveData<List<UpcomingMovie>> = repository.getUpcomingMovies()
 
+    /*fun loadMovies() : LiveData<List<UpcomingMovie>> {
+        return mo
+    }*/
 }

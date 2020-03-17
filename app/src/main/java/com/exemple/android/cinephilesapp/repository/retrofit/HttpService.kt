@@ -6,7 +6,9 @@ import retrofit2.http.GET
 
 interface HttpService {
 
-    @GET("/movie/upcoming")
+    @GET("movie/upcoming")
     fun upcomingMovies() : Call<UpcomingResults>
 
+    @GET("genre/movie/list")
+    fun genreMovie()
 }
